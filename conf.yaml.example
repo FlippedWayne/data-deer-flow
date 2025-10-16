@@ -6,12 +6,17 @@
 # - Set `verify_ssl` to `false` if your LLM server uses self-signed certificates
 # - A restart is required every time you change the `conf.yaml` file.
 
-BASIC_MODEL:
-  base_url: https://ark.cn-beijing.volces.com/api/v3
-  model: "doubao-1-5-pro-32k-250115"
-  api_key: xxxx
+# BASIC_MODEL:
+#  base_url: https://ark.cn-beijing.volces.com/api/v3
+#  model: "doubao-1-5-pro-32k-250115"
+#  api_key: xxxx
   # max_retries: 3 # Maximum number of retries for LLM calls
   # verify_ssl: false  # Uncomment this line to disable SSL certificate verification for self-signed certificates
+
+BASIC_MODEL:
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  model: "qwen-max-latest"
+  api_key: sk-c3b3effcd1ea4690a3417259a4d8c645
 
 # Local model configuration example:
 
@@ -40,6 +45,12 @@ BASIC_MODEL:
 #   api_key: xxxx
 #   max_retries: 3 # Maximum number of retries for LLM calls
 
+REASONING_MODEL:
+  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  model: "qwen3-235b-a22b-thinking-2507"
+  api_key: sk-c3b3effcd1ea4690a3417259a4d8c645
+  temperature: 0.6
+  top_p: 0.90
 
 # OTHER SETTINGS:
 # Search engine configuration (Only supports Tavily currently)
